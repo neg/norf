@@ -8,9 +8,9 @@ include_directories(
 file (GLOB src *.cpp)
 file (GLOB inc ../inc/*.h)
 
-set(target enet++)
+set(target norf)
 
 add_library(${target} ${src} ${inc})
-#target_link_libraries(${target} ...enet...)
+target_link_libraries(${target} ${ENET_LIBRARY})
 
 #add_subdirectory(unittest)
